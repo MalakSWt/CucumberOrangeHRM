@@ -13,6 +13,7 @@ public class SearchEmployeePage {
     private By employeeNameField = By.xpath("//input[@placeholder='Type for hints...']");
     private By searchButton = By.xpath("//button[@type='submit']");
     private By resultName = By.xpath("//div[@class='oxd-table-card']//div[3]");
+    private By idField = By.xpath("(//input[contains(@class,'oxd-input')])[2]");
 
     public void navigateToPIM() {
         driver.findElement(pimTab).click();
@@ -20,6 +21,10 @@ public class SearchEmployeePage {
 
     public void searchEmployee(String name) {
         driver.findElement(employeeNameField).sendKeys(name);
+        driver.findElement(searchButton).click();
+    }
+    public void searchEmployeeID(String id) {
+        driver.findElement(idField).sendKeys(id);
         driver.findElement(searchButton).click();
     }
 

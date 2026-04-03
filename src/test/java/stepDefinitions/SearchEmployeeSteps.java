@@ -33,6 +33,11 @@ DashboardPage dashboardPage = new DashboardPage(driver);
         searchEmployeePage.searchEmployee(name);
 
     }
+    @When("user searches for employee ID {string}")
+    public void user_searches_for_employee_id(String id) {
+        searchEmployeePage.searchEmployeeID(id);
+    }
+
     @Then("employee {string} should appear in search results")
     public void validateEmployee(String expectedName) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
