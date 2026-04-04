@@ -66,4 +66,4 @@ The framework is designed with scalability, maintainability, and readability in 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/MalakSWt/CucumberOrangeHRM.git
+https://github.com/MalakSWt/CucumberOrangeHRM.git
